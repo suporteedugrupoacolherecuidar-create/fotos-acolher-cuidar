@@ -1,0 +1,36 @@
+PORTAL DE FOTOS — GRUPO ACOLHER E CUIDAR (VERSÃO 2)
+
+ESTRUTURA
+- index.html: portal público de busca facial
+- admin.html: ferramentas da organização para QR Code e manifesto da galeria
+- config.js: nome e texto do evento
+- app.js: reconhecimento facial local no navegador
+- fotos/manifest.json: lista das fotos publicadas
+- style.css: identidade visual A&C
+
+COMO PUBLICAR SEM MENSALIDADE
+1. Crie um repositório GitHub (público) e envie todos os arquivos e a pasta fotos.
+2. No GitHub, Settings > Pages > Deploy from a branch > main > /root.
+3. Aguarde a URL HTTPS fornecida pelo GitHub.
+4. Abra essa URL + admin.html (ex.: https://usuario.github.io/repositorio/admin.html).
+5. Cole a URL pública no gerador de QR Code e baixe o PNG para imprimir/colocar no telão.
+
+COMO PREPARAR A GALERIA
+1. Coloque os arquivos de imagem na pasta fotos/ do projeto.
+2. Abra admin.html e selecione os mesmos arquivos locais para gerar o manifesto.
+3. Copie o manifesto gerado e substitua o conteúdo de fotos/manifest.json.
+4. Publique as alterações no GitHub.
+5. Faça um teste com fotos reais antes de divulgar o QR Code.
+
+COMO REUTILIZAR EM OUTRO EVENTO
+Edite config.js, alterando name e subtitle. Substitua as fotos e o manifesto da pasta fotos. Faça isso somente depois de arquivar a galeria anterior em outro local seguro. Esta versão é voltada a um evento ativo por publicação.
+
+LIMITES E SEGURANÇA
+- O site não envia a selfie para um servidor; o reconhecimento ocorre no navegador do participante.
+- Os modelos de IA são carregados de CDN; é necessária internet.
+- A análise é feita no dispositivo e pode ser lenta em celulares básicos ou galerias grandes.
+- A hospedagem gratuita tem limites de armazenamento e tráfego. Não é possível prometer custo zero ilimitado.
+- A galeria estática é acessível publicamente a quem tiver o endereço. Não coloque conteúdo que não possa ser compartilhado publicamente.
+- O reconhecimento facial pode errar. Revise os resultados e ofereça alternativa de busca manual.
+- A biblioteca face-api.js e os modelos carregados de CDN precisam ser testados em navegadores/dispositivos reais; esta entrega é um protótipo, não um sistema auditado ou certificado.
+- Dados biométricos são dados pessoais sensíveis na LGPD. Antes do uso real, defina com orientação jurídica a base legal, transparência, finalidade, segurança, retenção, canal para direitos e alternativa para quem não quiser usar a busca facial. A análise local reduz a transmissão da selfie, mas não dispensa a avaliação jurídica.
